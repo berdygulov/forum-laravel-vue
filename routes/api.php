@@ -26,6 +26,5 @@ Route::group([
     Route::post('/',[SubjectController::class, 'store']);
     Route::get('/{subject_id}/show',[SubjectController::class, 'show']);
     Route::get('/{subject_id}/destroy',[SubjectController::class, 'destroy']);
-    Route::get('/{subject_id}/chapter',[SubjectController::class, 'chapter']);
 //    Route::post('/{subject_id}/update',[SubjectController::class, 'update']);
 });

@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class SubjectController extends Controller
 {
     public function index() {
-        $subjects = Subject::query()
+        $subjects = Subject::with([
+            'chapter'
+        ])
             ->orderBy('created_at', 'desc' )
             ->get();
         return response()->json([
